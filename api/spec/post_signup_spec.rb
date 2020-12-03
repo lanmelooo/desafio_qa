@@ -100,3 +100,41 @@ describe "POST / signup" do
     end
   end
 end
+
+# examples = [
+#     {
+#       title: "usuario ja existe",
+#       payload: payload = { name: "Joao da Silva", email: "joao@ig.com.br", password: "pwd123" },
+#       code: 409,
+#       error: "Email already exists :(",
+#     },
+#     {
+#       title: "insira um nome de usuário",
+#       payload: { name: "", email: "geremias@hotmail.com.br", password: "pwd123" },
+#       code: 412,
+#       error: "required name",
+#     },
+#     {
+#       title: "insira um email para efetuar o login",
+#       payload: { name: "LicoLico", email: "", password: "pwd123" },
+#       code: 412,
+#       error: "required email",
+#     },
+#     {
+#       title: "insira um email para efetuar o login",
+#       payload: { name: "Seu zé", email: "ze@terra.com.br", password: "" },
+#       code: 412,
+#       error: "required password",
+#     },
+
+#   ]
+
+#   examples.each do |e|
+#     context "#{e[:title]}" do
+#       before(:all) do
+#         MongoDB.new.remove_user(payload[:email])
+#         Signup.new.create(:payload)
+#         @result = Signup.new.create(:payload)
+#       end
+#     end
+#   end
